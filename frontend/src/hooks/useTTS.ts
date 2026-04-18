@@ -74,10 +74,11 @@ export const useTTS = () => {
         if (voice) utter.voice = voice;
       }
 
-      utter.onend = () => {
+      const done = () => {
         if (currentlyPlaying.id === id) setPlaying({ id: null, stop: () => {} });
       };
-      utter.onerror = utter.onend;
+      utter.onend = done;
+      utter.onerror = done;
 
       setPlaying({
         id,
@@ -99,11 +100,12 @@ export const useTTS = () => {
       audioRef.current = audio;
       audio.playbackRate = 1; // ElevenLabs includes pacing already
 
-      audio.onended = () => {
+      const done = () => {
         URL.revokeObjectURL(url);
         if (currentlyPlaying.id === id) setPlaying({ id: null, stop: () => {} });
       };
-      audio.onerror = audio.onended;
+      audio.onended = done;
+      audio.onerror = done;
 
       setPlaying({
         id,
