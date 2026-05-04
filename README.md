@@ -4,6 +4,8 @@ An AI system that reads, connects, analyzes, and evolves knowledge across
 multiple documents. Not a chatbot. Not a PDF reader. A workspace that builds
 understanding.
 
+**Live Demo → [nexus-ai.vercel.app](https://ai-notebook-llm.vercel.app/)**
+
 ## What it does
 
 Upload PDFs or text files. Nexus will:
@@ -100,3 +102,9 @@ Atlas + all free API keys, stays on $0/month.
 - **Frontend** — Vercel (zero config). Set `NEXT_PUBLIC_API_URL`.
 - **Backend** — Render (Node web service). Set all `.env` variables.
 - **Database** — MongoDB Atlas free tier is plenty for early use.
+
+## Author
+ 
+**Aadithya A R** — [LinkedIn](https://www.linkedin.com/in/aadithya-a-r/) · [GitHub](https://github.com/Aadithyaar22)
+ 
+> Built as part of exploring production-grade RAG systems. Feedback welcome — open an issue or reach out directly.
